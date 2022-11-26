@@ -5,6 +5,7 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 public class Platforms : MonoBehaviour
 {
+//apply script to contoller gameobject
         private XRController controller = null;
         //platform distance from hands 
         public float platDis = 0.07f;
