@@ -6,8 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Platforms : MonoBehaviour
 {
         private XRController controller = null;
+        //platform distance from hands 
         public float platDis = 0.07f;
+        //hand position
         public Transform position;
+        //platform prefab
         public GameObject PlatPref;
         private GameObject Platform;
         public bool pressed = false;
