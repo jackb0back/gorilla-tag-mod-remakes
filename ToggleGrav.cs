@@ -5,10 +5,12 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 public class ToggleGrav : MonoBehaviour
 {
+//apply script to contoller gameobject
         private XRController controller = null;
         public GameObject Player;
         public Rigidbody PlayerRB;
         public Transform Cam;
+        //extra fly varibles and stuff because this has built in camera directon flying 
         public bool fly = false;
         public float speed = 15f;
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class ToggleGrav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    //toggle gravity with A
                 if (controller.inputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primary)) {
                     if (primary) {
                 PlayerRB.useGravity = false;
@@ -28,6 +31,7 @@ public class ToggleGrav : MonoBehaviour
                         PlayerRB.useGravity = true; 
                     }
                 }
+                //fly with B
                                 if (controller.inputDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool sec)) {
                     if (sec) {
                         if (fly) {
